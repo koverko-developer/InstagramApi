@@ -8,7 +8,7 @@ body:
 {
   uname : login account,
   password : password account,
-  code : defoult : 000, (for 2fa code from SMS)
+  code : default : 000, (for 2fa code from SMS)
 }
 
 response : full user info
