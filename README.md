@@ -3,7 +3,7 @@
 
 # Auntification user
 URI : http://45.141.100.127/auth
-```json
+```text
 body:
 {
   uname : login account,
@@ -17,7 +17,7 @@ response : full user info
 
 # User info
 URI : http://45.141.100.127/users/:uname
-```json
+```text
 
 
 
