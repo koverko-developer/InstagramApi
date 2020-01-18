@@ -3,7 +3,7 @@
 
 # Auntification user
 URI : http://45.141.100.127/auth
-```typescript
+```json
 body:
 {
   uname : login account,
@@ -12,5 +12,13 @@ body:
 }
 
 response : full user info
+
+```
+
+# User info
+URI : http://45.141.100.127/users/:uname
+```json
+
+
 
 ```
