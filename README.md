@@ -198,7 +198,7 @@ response :
 ```
 
 # Feed info
-#count media, count_comments, count likes
+count media, count_comments, count likes, 
 URI : http://localhost/media/:uname/feedInfo
 
 ```text
