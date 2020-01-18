@@ -2,7 +2,7 @@ import {Request, Response} from "express";
 import { get } from 'lodash';
 import * as Bluebird from 'bluebird';
 
-
+const res_error = {type : 'error', msg : 'error in body server'}
 
 export class Routes {
 
@@ -204,7 +204,7 @@ export class Routes {
            }
         })
 
-        app.route('/media/:userName/feed')
+        app.route('/media/:userName/feedInfo')
         // get specific contact
         .post((req: Request, res: Response) => {
            var uname = req.params.userName;
@@ -240,15 +240,18 @@ export class Routes {
                        count_comments += element.comment_count;
                        count_likes += element.like_count;
                      });
-                     console.log('count like = '+ count_likes + '  count comments = ' + count_comments)
-                     console.log('Complete! ....... -----' + all_feed.length)
+
+                     res.send({response : {count_likes : count_likes, count_comments : count_comments, count_media : all_feed.length}})
+
+
                    }),
                  );
-                 res.send('details')
+
                }
 
              })();
            }catch(e){
+             res.send(res_error)
              console.log(e);
            }
         })
