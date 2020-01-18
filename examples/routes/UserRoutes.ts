@@ -47,12 +47,15 @@ export class Routes {
             // Perform usual login
             // If 2FA is enabled, IgLoginTwoFactorRequiredError will be thrown
               Bluebird.try(() => ig.account.login(uname, password)).catch(
+                
                 IgLoginTwoFactorRequiredError,
                 async err => {
+                  
                   const twoFactorIdentifier = get(err, 'response.body.two_factor_info.two_factor_identifier');
                   if (!twoFactorIdentifier) {
                     throw new Error('Unable to login, no 2fa identifier found');
                   }
+                  res.status(200).send(err)
 
                   return ig.account.twoFactorLogin({
                     username: uname,
@@ -63,11 +66,12 @@ export class Routes {
                   });
                 },
               ).then(async data =>{
+                res.status(200).send(data)
                 console.log(data)
               })
 
             })();
-          res.status(200).send('')
+          
 
         })
 
