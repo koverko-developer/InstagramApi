@@ -1,7 +1,11 @@
 # InstagramApi
 
+#Menu
+- [Auntification](#Auntification-user)
+- [GrtUserInfo](#User-info)
 
-# Auntification user
+
+#Auntification user
 URI : http://45.141.100.127/auth
 ```text
 body:
