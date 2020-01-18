@@ -2,7 +2,8 @@
 
 # Menu
 - [Auntification](#Auntification-user)
-- [GrtUserInfo](#User-info)
+- [GetUserInfo](#User-info)
+- [Get Feed Info](#Feed-info)
 
 
 # Auntification user
@@ -194,4 +195,17 @@ response :
     "about_your_account_bloks_entrypoint_enabled": false
 }
 
+```
+
+# Feed info
+#count media, count_comments, count likes
+URI : http://localhost/media/:uname/feedInfo
+
+```text
+"response": {
+        "count_likes": 861,
+        "count_comments": 20,
+        "count_media": 38
+    }
+}
 ```
