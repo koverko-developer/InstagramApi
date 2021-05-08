@@ -48,7 +48,7 @@
     "firebase": "^7.7.0",
     "fs": "0.0.1-security",
     "image-size": "^0.7.3",
-    "json-bigint": "^0.3.0",
+    "json-bigint": "^1.0.0",
     "lodash": "^4.17.15",
     "luxon": "^1.12.1",
     "node-fetch": "^2.6.0",
